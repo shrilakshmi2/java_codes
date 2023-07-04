@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class q {
+	public static void main(String[]args) {
+	Scanner sc=new Scanner (System.in);
+	System.out.println("enter value of a");
+	double a=sc.nextDouble();
+	System.out.println("enter value of b");
+	double b=sc.nextDouble();
+	System.out.println("enter value of c");
+	double c=sc.nextDouble();
+	double d=b*b-4.0*a*c;
+	double r1,r2;
+	if(d==0) {
+		System.out.println("roots are equal and real");
+		r1=r2=-b/2*a;
+		System.out.println("root1="+r1);
+		System.out.println("root2="+r2);
+	}
+	else if(d>0) {
+		System.out.println("roots are different and real");
+		double root1=-b+Math.sqrt(d)/2*a;
+		double root2=-b-Math.sqrt(d)/2*a;
+		System.out.println("root1="+root1);
+		System.out.println("root2="+root2);
+	}
+	else {
+		System.out.println("roots are imaginary and real");
+		r1=-b/2*a;
+		r2=Math.sqrt(-d)/2*a;
+		System.out.println("root1"+r1+"+i "+r2);
+		System.out.println("root2"+r1+"-i "+r2);
+	}
+}
+}
